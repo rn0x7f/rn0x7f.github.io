@@ -2,12 +2,11 @@ const box = document.getElementById('interactive-box');
 
 // Add an event listener for click interaction
 box.addEventListener('click', () => {
-    box.style.transform = 'scale(1.5) rotate(360deg)';
-    box.style.backgroundColor = '#ff5722';
+    // Add the class that triggers the animation
+    box.classList.add('rotate');
 
-    // Reset the animation after 1 second
+    // Wait for the animation to complete (1 second), then navigate to the new page
     setTimeout(() => {
-        box.style.transform = 'scale(1) rotate(0deg)';
-        box.style.backgroundColor = '#4caf50';
+        window.location.href = 'portfolio.html';
     }, 1000);
 });
